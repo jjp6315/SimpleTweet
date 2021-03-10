@@ -10,10 +10,12 @@ import android.widget.Toast;
 
 public class ComposeActivity extends AppCompatActivity {
 
-    public static final int MAX_TWEET_LENGTH = 140;
+    public static final int MAX_TWEET_LENGTH = 280;
 
     EditText etCompose;
     Button btnTweet;
+    EditText counterText;
+    EditText counterOverride;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class ComposeActivity extends AppCompatActivity {
 
         etCompose = findViewById(R.id.etCompose);
         btnTweet = findViewById(R.id.btnTweet);
+        counterText = findViewById(R.id.counterText);
+        counterOverride = findViewById(R.id.counterOverride);
 
         // Set click listener on button
         btnTweet.setOnClickListener(new View.OnClickListener() {
